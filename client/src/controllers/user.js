@@ -1,4 +1,4 @@
-const base = "https://talent-box.onrender.com";
+const base = "https://talent-box-test.onrender.com";
 
 export const register_user = async (obj) => {
   const res = await fetch(`${base}/api/user/signup`, {
