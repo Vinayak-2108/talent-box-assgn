@@ -1,4 +1,4 @@
-const base = "http://localhost:5000";
+const base = "https://talent-box.onrender.com";
 
 export const register_user = async (obj) => {
   const res = await fetch(`${base}/api/user/signup`, {
