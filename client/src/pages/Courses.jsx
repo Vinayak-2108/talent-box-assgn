@@ -24,7 +24,7 @@ function Courses() {
                   atob(localStorage.getItem("user_token").split(".")[1])
                 ).id,
               };
-              get_all_courses(obj).then((data) => {
+              get_all_courses().then((data) => {
                 console.log(data);
                 setForms(data);
               });
