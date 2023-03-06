@@ -58,13 +58,6 @@ function Courses() {
                                 />
                             );
                         }): ('')}
-                        {/* <Course desc="(New) Responsive Web Design Certification" />
-                        <Course desc="(New) Responsive Web Design Certification" />
-                        <Course desc="(New) Responsive Web Design Certification" />
-                        <Course desc="(New) Responsive Web Design Certification" />
-                        <Course desc="(New) Responsive Web Design Certification" />
-                        <Course desc="(New) Responsive Web Design Certification" />
-                        <Course desc="(New) Responsive Web Design Certification" /> */}
                     </div>
                 </div>
             </div>

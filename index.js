@@ -21,7 +21,15 @@ app.use(cors());
 app.use(express.json());
 
 const YOUR_DOMAIN = "http://localhost:5000";
+
 app.use("/api/user", userRoutes);
+app.use(express.static('client/build'));
+
+app.get('*', (req, res) =>
+  res.sendFile(
+    path.resolve(__dirname, 'client','build', 'index.html')
+  )
+);
 app.listen(5000, () => {
     console.log("Backend Server running ");
 });

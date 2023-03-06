@@ -6,8 +6,6 @@ const Course = (props) => {
             <button className="course-box">
                 <div>
                     {`${props.title} (${props.duration})`}
-                
-
                 </div>
             </button>
         </>
