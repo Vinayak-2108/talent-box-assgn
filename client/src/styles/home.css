@@ -1,0 +1,18 @@
+.hero-text{
+    font-size: 4rem;
+    font-weight: 800;
+}
+.sub-text{
+    font-size: 2rem;
+    font-weight: 900;
+}
+.companies{
+    padding-top:1rem;
+}
+.cta-home{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    width: 50%;
+    margin: 2rem auto;
+}
