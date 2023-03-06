@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const cors=require("cors");
+const path = require('path');
 
 const dotenv = require("dotenv");
 
@@ -19,8 +20,6 @@ try {
 
 app.use(cors());
 app.use(express.json());
-
-const YOUR_DOMAIN = "http://localhost:5000";
 
 app.use("/api/user", userRoutes);
 app.use(express.static('client/build'));
