@@ -12,9 +12,9 @@ const Router = () => {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/SignUp" element={<Signup />} />
-          <Route exact path="/Login" element={<Login />} />
-          <Route exact path="/Courses" element={<Courses />} />
+          <Route exact path="/signup" element={<Signup />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/courses" element={<Courses />} />
         </Routes>
       </BrowserRouter>
     </>
