@@ -18,7 +18,7 @@ function Login() {
           login_user(obj).then((data) => {
             if (data.tag === true) {
               localStorage.setItem("user_token", data.token);
-              navigate("/courses");
+              navigate("/Courses");
             } else {
               alert("Invalid login");
             }
