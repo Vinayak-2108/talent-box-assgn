@@ -1,17 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/navbar.css";
 import logo from "../assets/logo.jpg";
 
 function Navbar() {
-    // <div className="search">
-    //             <div><img src={search} alt="" className=""/></div>
-    //             <input
-    //                 type="text"
-    //                 className="hidden md:block bg-[#3C3C50]"
-    //                 placeholder={` Search 9,000+ tutorials`}
-    //             />
-    //             </div>
+    const navigate = useNavigate();
     return (
         <nav className="bg-[#0A0A23] w-full absolute">
             <div className="flex items-center justify-between w-100 h-10">
@@ -44,15 +37,34 @@ function Navbar() {
 
                 {/* <h1 className="text-white logo text-2xl">freeCodeCamp</h1> */}
                 {/* <img src={logo} alt="" className="logo"/> */}
-                <Link to="/"><img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" className="logo" alt="freeCodeCamp.org"/></Link>
-                
+                <Link to="/">
+                    <img
+                        src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+                        className="logo"
+                        alt="freeCodeCamp.org"
+                    />
+                </Link>
+
                 <div className="p-1 w-1/3 flex justify-end gap-2 mr-2 ">
                     <button className="text-white border-white border p-1 navbtn">
                         Menu
                     </button>
-                    <button className="bg-[#FEC143] border-2 border-[#ffaf10] tracking-wider navbtn">
-                        <Link to="/signup">Sign in</Link>
-                    </button>
+                    {localStorage.getItem("user_token") ? (
+                        <button
+                            onClick={() => {
+                                localStorage.removeItem("user_token");
+                                navigate("/");
+                                window.location.reload();
+                            }}
+                            className="bg-[#FEC143] border-2 border-[#ffaf10] tracking-wider navbtn"
+                        >
+                            <Link to="/signup">Log out</Link>
+                        </button>
+                    ) : (
+                        <button className="bg-[#FEC143] border-2 border-[#ffaf10] tracking-wider navbtn">
+                            <Link to="/signup">Sign in</Link>
+                        </button>
+                    )}
                 </div>
             </div>
         </nav>

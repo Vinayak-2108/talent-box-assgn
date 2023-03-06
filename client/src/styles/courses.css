@@ -1,0 +1,38 @@
+.courses-hero {
+    font-size: 2rem;
+    font-weight: 800;
+}
+.quote {
+    font-size: 1.3rem;
+    text-align: center;
+}
+.course-box {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    font-size: 18px;
+    font-weight: 800;
+    background-color: #d1d0d4;
+    color: #1b1a45;
+    border: 2px solid #3a3b4e;
+    /* border-radius: 5px; */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.course-box:hover {
+    background-color: #1b1a45;
+    color: #d1d0d4;
+}
+
+.courses-container{
+    width: 80%;
+
+}
+.map-icon{
+    width: 50px;
+    
+    
+}
